@@ -14,15 +14,15 @@ string rtrim(const string &);
 
 int findDigits(int n) 
 {
-    int tmp = n;
-    int cnt = 0;
+    int t = n;
+    int c = 0;
     while(n > 0)
     {
         int digit = n % 10;
-        if(digit != 0 && tmp % digit == 0) cnt++; 
+        if(digit != 0 && t % digit == 0) c++; 
         n /= 10;
     }
-    return cnt;
+    return c;
 }
 
 int main()
