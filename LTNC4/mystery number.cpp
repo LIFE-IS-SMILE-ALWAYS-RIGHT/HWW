@@ -1,25 +1,29 @@
-#include <cstdio>
-#include <cstring>
-#include <cstdlib>
-#include <map>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
     int n;
-    scanf("%d", &n);
+    cin >> n;
+
     int sum = 0;
-    for (int i = 0; i < n; ++ i) {
+    // Reading first set of integers
+    for (int i = 0; i < n; ++i) {
         int x;
-        scanf("%d", &x);
+        cin >> x;
         sum ^= x;
     }
-    for (int i = 0; i < n + 1; ++ i) {
+
+    // Reading second set of integers
+    for (int i = 0; i < n + 1; ++i) {
         int x;
-        scanf("%d", &x);
+        cin >> x;
         sum ^= x;
     }
-    printf("%d\n", sum);
+
+    cout << sum << endl;
 
     return 0;
 }
+
